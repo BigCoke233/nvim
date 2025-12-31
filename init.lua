@@ -1,4 +1,4 @@
---- < BASIC TWEAKS > ---
+-- < BASIC TWEAKS > ---
 
 -- set leader key to space
 vim.g.mapleader = " "
@@ -31,7 +31,16 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 vim.opt.endofline = true
 vim.opt.fixendofline = true
 
+-- tab width
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+
 --- < PLUGINS > ---
 
 require("config.lazy")
+
+--- < THEME > ---
+
+vim.cmd("colorscheme kanagawa-dragon")
 

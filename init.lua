@@ -20,6 +20,5 @@ vim.diagnostic.config({
 
 --- < PLUGINS > ---
 
--- plugin manaer: lazy.nvim
 require("config.lazy")
 

@@ -36,6 +36,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
+-- hightlight current line
+vim.cmd("set cursorline")
+
 --- < PLUGINS > ---
 
 require("config.lazy")

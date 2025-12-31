@@ -21,6 +21,16 @@ vim.diagnostic.config({
   update_in_insert = false,
 })
 
+-- remove trailing spaces
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  command = [[%s/\s\+$//e]],
+})
+
+-- ensure new line at eof
+vim.opt.endofline = true
+vim.opt.fixendofline = true
+
 --- < PLUGINS > ---
 
 require("config.lazy")

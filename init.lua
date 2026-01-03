@@ -39,6 +39,9 @@ vim.opt.expandtab = true
 -- hightlight current line
 vim.cmd("set cursorline")
 
+-- escape TERMNIAL mode using ESC
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
 --- < PLUGINS > ---
 
 require("config.lazy")

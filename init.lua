@@ -42,6 +42,10 @@ vim.cmd("set cursorline")
 -- escape TERMNIAL mode using ESC
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+-- disable certain providers
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+
 --- < PLUGINS > ---
 
 require("config.lazy")

@@ -5,10 +5,13 @@ return {
       "hrsh7th/nvim-cmp",
       "hrsh7th/cmp-nvim-lsp",
       "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
     },
     config = function()
-	    vim.lsp.enable("gopls")
-	    vim.lsp.enable("marksman")
+      local lsps = { "gopls", "marksman", "ts_ls", "vue_ls", "cssls", "html" }
+
+	    -- ensure installs with Mason
+      require("mason-lspconfig").setup({ ensure_installed = lsps })
 
       -- configure LUA lsp
 	    vim.lsp.config('lua_ls', {
@@ -20,7 +23,6 @@ return {
           }
         }
       })
-      vim.lsp.enable("lua_ls")
       -- / configure LUA lsp
 
       -- configure VUE language server
@@ -46,8 +48,9 @@ return {
 
       vim.lsp.config('vue_ls', vue_ls_config)
       vim.lsp.config('ts_ls', ts_ls_config)
-      vim.lsp.enable({'ts_ls', 'vue_ls'}) -- If using `ts_ls` replace `vtsls` to `ts_ls`
       -- / configure VUE language server
+
+      vim.lsp.enable(lsps)
     end,
   },
 }

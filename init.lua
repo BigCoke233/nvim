@@ -50,7 +50,3 @@ vim.g.loaded_ruby_provider = 0
 
 require("config.lazy")
 
---- < THEME > ---
-
-vim.cmd("colorscheme kanagawa-dragon")
-

@@ -8,7 +8,7 @@ return {
       "mason-org/mason-lspconfig.nvim",
     },
     config = function()
-      local lsps = { "gopls", "marksman", "ts_ls", "vue_ls", "cssls", "html" }
+      local lsps = { "gopls", "marksman", "ts_ls", "vue_ls", "cssls", "html", 'unocss'  }
 
 	    -- ensure installs with Mason
       require("mason-lspconfig").setup({ ensure_installed = lsps })
@@ -27,7 +27,7 @@ return {
 
       -- configure VUE language server
       local vue_language_server_path = vim.fn.expand '$MASON/packages' .. '/vue-language-server' .. '/node_modules/@vue/language-server'
-      local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
+      local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue'}
       local vue_plugin = {
         name = '@vue/typescript-plugin',
         location = vue_language_server_path,

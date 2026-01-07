@@ -7,7 +7,10 @@ return {
     init = function()
       vim.g.barbar_auto_setup = false
       local map = vim.api.nvim_set_keymap
-      local opts = { noremap = true, silent = true }
+      local opts = {
+        noremap = true,
+        silent = true,
+      }
 
       -- Move to previous/next
       map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
@@ -65,6 +68,7 @@ return {
       -- :BarbarDisable - very bad command, should never be used
     end,
     opts = {
+      insert_at_start = false
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },

@@ -32,8 +32,8 @@ vim.opt.endofline = true
 vim.opt.fixendofline = true
 
 -- tab width
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- hightlight current line
@@ -48,5 +48,5 @@ vim.g.loaded_ruby_provider = 0
 
 --- < PLUGINS > ---
 
+require("filetype")
 require("config.lazy")
-
